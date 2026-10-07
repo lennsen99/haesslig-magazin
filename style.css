@@ -1,0 +1,212 @@
+/* hæßlig-magazin – Stylesheet
+   Hinweis: Farben und Schriften sind Annäherungen (neutral, schwarz auf weiß).
+   Zum Anpassen einfach die Variablen unten ändern. */
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #1a1a1a;
+  --muted: #666666;
+  --line: #e2e2e2;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --max: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Header / Navigation ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+.logo img { width: 160px; }
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.75rem;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.4rem 0;
+  text-decoration: none;
+}
+
+.main-nav a:hover { text-decoration: underline; }
+
+.has-sub { position: relative; }
+
+.sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -0.75rem;
+  min-width: 11rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  z-index: 10;
+}
+
+.has-sub:hover > .sub,
+.has-sub:focus-within > .sub { display: block; }
+
+.cart {
+  text-decoration: none;
+}
+.cart:hover { text-decoration: underline; }
+
+/* ---------- Inhalt ---------- */
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+
+.intro {
+  max-width: 46rem;
+  margin: 2rem auto 4rem;
+}
+
+.intro p { margin: 0 0 1.25rem; }
+
+h1, h2, h3 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+.magazin {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ---------- Aktuelle Ausgabe ---------- */
+
+.aktuell {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.aktuell img {
+  width: 100%;
+  margin: 0 auto 1.5rem;
+  object-fit: cover;
+}
+
+/* ---------- Archiv ---------- */
+
+.archiv { text-align: center; }
+
+.archiv-item {
+  display: block;
+  margin-bottom: 2.5rem;
+  text-decoration: none;
+}
+
+.archiv-item img {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+}
+
+.archiv-item .titel {
+  font-size: 1.5rem;
+}
+
+.archiv-item:hover .titel { text-decoration: underline; }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* ---------- Mobil ---------- */
+
+@media (max-width: 767px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .main-nav > ul { flex-direction: column; gap: 0; }
+  .sub { position: static; border: 0; padding: 0 0 0 1rem; display: block; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}
