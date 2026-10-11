@@ -79,7 +79,7 @@ a:hover { text-decoration-color: var(--accent); }
 }
 
 .brand { display: block; line-height: 0; text-decoration: none; }
-.brand img { height: 2.00rem; width: auto; max-width: 60vw; }
+.brand img { height: 2.15rem; width: auto; max-width: 60vw; }
 
 .site-header ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin: 0; padding: 0; list-style: none; }
 .site-header nav a { font-size: 0.95rem; text-decoration: none; padding-block: 0.25rem; border-bottom: 2px solid transparent; }
