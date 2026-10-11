@@ -79,7 +79,7 @@ a:hover { text-decoration-color: var(--accent); }
 }
 
 .brand { display: block; line-height: 0; text-decoration: none; }
-.brand img { height: 1.75rem; width: auto; max-width: 60vw; }
+.brand img { height: 2.25rem; width: auto; max-width: 60vw; }
 
 .site-header ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin: 0; padding: 0; list-style: none; }
 .site-header nav a { font-size: 0.95rem; text-decoration: none; padding-block: 0.25rem; border-bottom: 2px solid transparent; }
@@ -203,13 +203,18 @@ h3 { font-size: 1.05rem; font-weight: 650; margin: 1.75rem 0 0.4rem; }
 .people strong { display: block; font-weight: 650; }
 .people span { display: block; margin-top: 0.2rem; font-size: 0.95rem; color: var(--soft); line-height: 1.45; }
 
-.shop-table { width: 100%; max-width: 32rem; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.shop-table { width: 100%; max-width: 40rem; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
 .shop-table th, .shop-table td { padding: 0.85rem 1.1rem; text-align: left; border-bottom: 1px solid var(--line); font-weight: 400; }
 .shop-table thead th { font-size: 0.85rem; color: var(--soft); }
 .shop-table tbody th { font-weight: 650; }
 .shop-table tbody tr:last-child > * { border-bottom: 0; }
-.shop-table a { text-decoration: none; }
-.shop-table a:hover { text-decoration: underline; }
+.shop-table a:not(.button) { text-decoration: none; }
+.shop-table .buy-cell { text-align: right; }
+.shop-table .button { padding: 0.45rem 0.95rem; font-size: 0.9rem; white-space: nowrap; }
+.steps { max-width: 42rem; margin: 0 0 1.5rem; padding-left: 1.4rem; }
+.steps li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+.note { max-width: 42rem; color: var(--soft); }
+.shop-table a:not(.button):hover { text-decoration: underline; }
 
 .pay { display: grid; gap: 1rem var(--pad); grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
 .box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.4rem; }
