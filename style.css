@@ -66,7 +66,7 @@ a:hover { color: var(--band); }
 }
 
 .brand { display: block; line-height: 0; text-decoration: none; }
-.brand img { height: 1.75rem; width: auto; max-width: 60vw; }
+.brand img { height: 2rem; width: auto; max-width: 60vw; }
 
 .site-header ul { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
 .site-header nav a {
@@ -301,4 +301,49 @@ h2.big { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; }
   html { scroll-behavior: auto; }
   .shot img { transition: none; }
   .ticker-track { animation: none; }
+}
+
+
+/* ---------- Ergänzungen (Logo-Hero, Teaser, Widerruf, Formular, mobile Navigation) ---------- */
+
+.band a:hover { color: var(--pop); }
+
+.hero { display: grid; gap: 1.5rem var(--pad); align-items: center; padding-block: clamp(1.5rem, 5vw, 3.5rem); overflow-wrap: normal; }
+@media (min-width: 52rem) { .hero { grid-template-columns: auto minmax(0, 1fr); } }
+.hero-logo { margin: 0; line-height: 0; font-size: 1rem; letter-spacing: 0; }
+.hero-logo img { width: clamp(9rem, 30vw, 22rem); height: auto; }
+.hero-sub { margin: 0; font-size: clamp(1.4rem, 4vw, 3rem); }
+.hero .lead { margin: 1.25rem 0 0; }
+
+.facts { display: grid; gap: 1.25rem 2rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); margin: 1.75rem 0; padding: 0; }
+.facts div { border-top: 1px solid currentColor; padding-top: 0.6rem; }
+.facts dt { font-size: 0.85rem; opacity: 0.8; }
+.facts dd { margin: 0.2rem 0 0; font-size: 1.2rem; line-height: 1.3; letter-spacing: -0.01em; }
+
+.withdraw { padding-block: 1.5rem 0; }
+.button-pop { background: var(--pop); border-color: var(--ink); color: var(--ink); }
+.button-pop:hover, .button-pop:focus-visible { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.todo { background: #fff3a8; padding: 0.05em 0.3em; }
+
+.legal h3 { font-size: 1.15rem; }
+.legal ol, .legal ul { max-width: 42rem; }
+.legal .form-sample { background: var(--wash); border-radius: 1.25rem; padding: 1.25rem 1.5rem; }
+.legal .form-sample p { margin: 0 0 0.75rem; }
+
+.form { display: grid; gap: 1.25rem; max-width: 36rem; margin-top: 1.5rem; }
+.form label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+.form .hint { display: block; font-weight: 400; font-size: 0.9rem; color: var(--soft); }
+.form input[type="text"], .form input[type="email"], .form textarea {
+  width: 100%; padding: 0.7rem 1rem; border: 1px solid var(--ink); border-radius: 0.9rem;
+  background: #fff; color: var(--ink); font: inherit;
+}
+.form textarea { min-height: 8rem; resize: vertical; }
+.form input:focus-visible, .form textarea:focus-visible { outline: 3px solid var(--band); outline-offset: 2px; }
+.form .botcheck { position: absolute; left: -9999px; }
+
+@media (max-width: 40rem) {
+  .site-header { gap: 0.4rem 0.75rem; }
+  .site-header ul { flex-wrap: nowrap; gap: 0.25rem; }
+  .site-header nav a { padding: 0.2rem 0.6rem; font-size: 0.8rem; white-space: nowrap; }
 }

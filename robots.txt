@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /widerrufen.html
+Disallow: /widerruf-gesendet.html
+
+Sitemap: https://www.haesslig-magazin.de/sitemap.xml

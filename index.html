@@ -13,6 +13,10 @@
   <meta property="og:url" content="https://www.haesslig-magazin.de/">
   <meta property="og:image" content="https://www.haesslig-magazin.de/images/panik1.jpg">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script data-goatcounter="https://haesslig-magazin.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body class="home">
@@ -33,10 +37,30 @@
   <main id="inhalt">
 
     <section class="hero wrap">
-      <h1>hæßlig<span>-magazin</span></h1>
-      <p class="hero-sub">(magazin (für handyfotografie usw.))</p>
-      <p class="lead">Wir sind das <em>hæßlig (magazin (für handyfotografie usw.))</em> - das Magazin, das sich einem Medium verschrieben hat, dessen künstlerischer Wert oft unterschätzt wird: <strong>HANDYFOTOGRAFIE</strong></p>
+      <h1 class="hero-logo"><img src="images/logo.png" alt="hæßlig-magazin" width="375" height="375" loading="eager"></h1>
+      <div class="hero-text">
+        <p class="hero-sub">(magazin (für handyfotografie usw.))</p>
+        <p class="lead">Wir sind das <em>hæßlig (magazin (für handyfotografie usw.))</em> - das Magazin, das sich einem Medium verschrieben hat, dessen künstlerischer Wert oft unterschätzt wird: <strong>HANDYFOTOGRAFIE</strong></p>
+      </div>
     </section>
+
+    <section class="section wrap band" id="naechste-ausgabe" aria-labelledby="h-next">
+      <h2 id="h-next">nächste ausgabe</h2>
+      <div class="prose">
+        <p class="lead">Heartbreak: Unsere nächste Ausgabe entsteht in Kooperation mit der BELLA triste aus Hildesheim. Release ist am 19. November.</p>
+        <dl class="facts">
+          <div><dt>Release</dt><dd>Donnerstag, 19.11.2026<br>19:30 Uhr</dd></div>
+          <div><dt>Ort</dt><dd>Literaturhaus St. Jakobi<br>Jakobikirchgasse<br>31134 Hildesheim</dd></div>
+          <div><dt>Eintritt</dt><dd>frei</dd></div>
+        </dl>
+        <p>Es geht um Liebeskummer in vielen Formen. Beim Release der BELLA triste #76 werden Texte und Bilder aus der Ausgabe vorgestellt.</p>
+        <div class="buttons">
+          <a class="button" href="https://stjakobi.de/veranstaltungen/bella-triste-release-76" target="_blank" rel="noopener">zur veranstaltung</a>
+          <a class="button button-line" href="https://www.bellatriste.de" target="_blank" rel="noopener">zur BELLA triste</a>
+        </div>
+      </div>
+    </section>
+
 
     <section class="latest" aria-labelledby="h-latest">
       <div class="latest-inner wrap">
@@ -73,7 +97,7 @@
             <span class="cover"><img src="images/drueben1.png" alt="" loading="lazy" decoding="async"></span>
             <span class="card-body">
               <span class="card-title">03 DRÜBEN</span>
-              <span class="card-meta"><span class="tag tag-ok">10,00 €</span></span>
+              <span class="card-meta">April 2025 <span class="tag tag-ok">10,00 €</span></span>
             </span>
           </a>
         </li>
@@ -88,10 +112,10 @@
         </li>
         <li class="card issue-transit">
           <a href="transit.html">
-            <span class="cover"><img src="images/transit1.jpg" alt="" loading="lazy" decoding="async"></span>
+            <span class="cover"><img src="images/transit1.png" alt="" loading="lazy" decoding="async"></span>
             <span class="card-body">
               <span class="card-title">01 TRANSIT</span>
-              <span class="card-meta"><span class="tag tag-out">ausverkauft</span></span>
+              <span class="card-meta">Februar 2024 <span class="tag tag-out">ausverkauft</span></span>
             </span>
           </a>
         </li>
@@ -119,12 +143,24 @@
         <p>Für dringende Fragen &amp; mehr schreib uns per Mail an <a href="mailto:info@haesslig-magazin.de">info@haesslig-magazin.de</a> oder folge uns für alle Updates auf <a href="https://www.instagram.com/haesslig.magazin/" target="_blank" rel="noopener">Instagram</a>.</p>
       </div>
     </section>
+    <section class="section wrap band-tint" id="instagram" aria-labelledby="h-insta">
+      <h2 id="h-insta">instagram</h2>
+      <div class="prose">
+        <p class="lead">Neue Ausgaben, Termine und Einblicke bekommst du zuerst auf Instagram: <a href="https://www.instagram.com/haesslig.magazin/" target="_blank" rel="noopener">@haesslig.magazin</a></p>
+        <p><a class="button" href="https://www.instagram.com/haesslig.magazin/" target="_blank" rel="noopener">auf instagram folgen</a></p>
+      </div>
+    </section>
   </main>
+
+  <div class="withdraw wrap">
+    <a class="button button-pop" href="widerrufen.html">Vertrag widerrufen</a>
+  </div>
 
   <footer class="site-footer">
     <p>hæßlig-magazin &middot; ein Projekt des vika e.V.</p>
     <ul>
       <li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
+      <li><a href="widerruf.html">Widerrufsbelehrung</a></li>
       <li><a href="https://www.instagram.com/haesslig.magazin/" target="_blank" rel="noopener">Instagram</a></li>
     </ul>
   </footer>
