@@ -7,10 +7,11 @@
   --ink: #1d1d1b;
   --soft: #5c5b57;
   --hair: #d9d8d2;
-  --band: #23392f;        /* dunkles Waldgrün für Bänder und Buttons */
+  --band: #2a1626;        /* dunkles Aubergine für Bänder und Buttons */
   --band-ink: #ffffff;
-  --tint: #eef2cf;        /* helles Gelbgrün für zweite Bandfarbe */
-  --pop: #dcec4a;         /* Signalton für Laufband und Hover */
+  --tint: #fde3ec;        /* zartes Rosa für zweite Bandfarbe */
+  --pop: #ff6a2b;         /* Panik-Orange: Signalton für Laufband und Hover */
+  --magenta: #e5127d;     /* Magenta der nächsten Ausgabe */
   --wash: #f0efea;
 
   --font: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
@@ -153,10 +154,11 @@ h2.big { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; }
 .band .button { background: var(--band-ink); border-color: var(--band-ink); color: var(--band); }
 .band .button:hover { background: var(--pop); border-color: var(--pop); color: var(--ink); }
 .band-tint { background: var(--tint); }
-.band-pop { max-width: none; border-top: 0; background: var(--pop); color: var(--ink);
+.band-pop { max-width: none; border-top: 0; background: var(--magenta); color: #fff;
   padding-inline: max(var(--pad), calc((100% - var(--max)) / 2 + var(--pad))); }
-.band-pop .button { background: var(--ink); border-color: var(--ink); color: #fff; }
-.band-pop .button:hover { background: #fff; color: var(--ink); }
+.band-pop a:hover { color: var(--ink); }
+.band-pop .button { background: #fff; border-color: #fff; color: var(--ink); }
+.band-pop .button:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
 
 /* ---------- Karten ---------- */
 
@@ -255,7 +257,7 @@ h2.big { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; }
 .site-footer {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
   margin-top: 2rem; padding: 2rem var(--pad) 2.5rem;
-  background: var(--band); color: #d3dcd6; font-size: 0.95rem;
+  background: var(--band); color: #e3d2de; font-size: 0.95rem;
 }
 .site-footer p { margin: 0; }
 .site-footer ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin: 0; padding: 0; list-style: none; }
