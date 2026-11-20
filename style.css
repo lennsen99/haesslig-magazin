@@ -7,11 +7,13 @@
   --ink: #1d1d1b;
   --soft: #5c5b57;
   --hair: #d9d8d2;
-  --band: #2a1626;        /* dunkles Aubergine für Bänder und Buttons */
+  --band: #d9006f;        /* Magenta für Bänder und Buttons */
   --band-ink: #ffffff;
-  --tint: #fde3ec;        /* zartes Rosa für zweite Bandfarbe */
-  --pop: #ff6a2b;         /* Panik-Orange: Signalton für Laufband und Hover */
-  --magenta: #e5127d;     /* Magenta der nächsten Ausgabe */
+  --tint: #ffe3ef;        /* zartes Rosa */
+  --pop: #ff9ccb;         /* helles Rosa: Laufband und Hover */
+  --magenta: #e6007e;     /* Magenta von 05 HEARTBREAK */
+  --red: #d40c13;         /* Rot von 05 HEARTBREAK */
+  --wine: #3a0b25;        /* dunkles Weinrot für Kontraste */
   --wash: #f0efea;
 
   --font: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
@@ -154,11 +156,11 @@ h2.big { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; }
 .band .button { background: var(--band-ink); border-color: var(--band-ink); color: var(--band); }
 .band .button:hover { background: var(--pop); border-color: var(--pop); color: var(--ink); }
 .band-tint { background: var(--tint); }
-.band-pop { max-width: none; border-top: 0; background: var(--magenta); color: #fff;
+.band-pop { max-width: none; border-top: 0; background: var(--wine); color: #fff;
   padding-inline: max(var(--pad), calc((100% - var(--max)) / 2 + var(--pad))); }
-.band-pop a:hover { color: var(--ink); }
-.band-pop .button { background: #fff; border-color: #fff; color: var(--ink); }
-.band-pop .button:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.band-pop a:hover { color: var(--pop); }
+.band-pop .button { background: var(--pop); border-color: var(--pop); color: var(--ink); }
+.band-pop .button:hover { background: #fff; border-color: #fff; color: var(--ink); }
 
 /* ---------- Karten ---------- */
 
@@ -257,7 +259,7 @@ h2.big { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; }
 .site-footer {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
   margin-top: 2rem; padding: 2rem var(--pad) 2.5rem;
-  background: var(--band); color: #e3d2de; font-size: 0.95rem;
+  background: var(--band); color: #ffe3ef; font-size: 0.95rem;
 }
 .site-footer p { margin: 0; }
 .site-footer ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin: 0; padding: 0; list-style: none; }
@@ -353,4 +355,18 @@ h2.big { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; }
   .brand img { height: 2rem; }
   .site-header ul { flex-wrap: nowrap; gap: 0.25rem; }
   .site-header nav a { padding: 0.2rem 0.6rem; font-size: 0.8rem; white-space: nowrap; }
+}
+
+/* ---------- 05 HEARTBREAK ---------- */
+.latest-cover .cover video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.latest-note { margin: 0.9rem 0 0; font-size: 0.9rem; color: var(--soft); }
+.note, .note-inline { color: var(--soft); font-size: 0.9rem; }
+.video-wrap { max-width: 26rem; }
+.video-wrap video { width: 100%; height: auto; display: block; background: var(--wash); }
+#magazine .cards { grid-column: 1 / -1; }
+@media (min-width: 40rem) { #magazine .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 56rem) {
+  #magazine { display: block; }
+  #magazine > h2 { margin-bottom: 2rem; }
+  #magazine .cards { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
