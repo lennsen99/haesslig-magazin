@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//haesslig-magazin//release-halle//DE
+BEGIN:VEVENT
+UID:release-halle-2026-12-05@haesslig-magazin.de
+DTSTAMP:20261125T180000Z
+DTSTART;TZID=Europe/Berlin:20261205T190000
+SUMMARY:Release BELLA triste #76 x hæßlig-magazin #5 (Halle)
+LOCATION:Offspace\, Berliner Str. 243\, Halle (Saale)
+DESCRIPTION:Lesungen von Linda Sensenberger\, Sascha Höller und Suse Schröder\, Musik von Lizz-E\, Heartbreak-Karaoke und Bar. Eintritt frei.
+URL:https://www.haesslig-magazin.de/heartbreak.html
+END:VEVENT
+END:VCALENDAR

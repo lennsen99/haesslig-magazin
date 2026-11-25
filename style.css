@@ -370,3 +370,18 @@ h2.big { font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; }
   #magazine > h2 { margin-bottom: 2rem; }
   #magazine .cards { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
+
+/* ---------- Hinweis-Fenster ---------- */
+.popup { width: min(92vw, 30rem); padding: 2rem 1.75rem 1.75rem; border: 0; border-radius: 1.5rem; background: var(--band); color: var(--band-ink); }
+.popup::backdrop { background: rgba(58, 11, 37, 0.65); }
+.popup h2 { margin: 0 0 0.5rem; font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1; }
+.popup p { margin: 0 0 1rem; line-height: 1.4; }
+.popup .popup-eyebrow { font-size: 0.95rem; opacity: 0.9; }
+.popup .popup-big { font-size: clamp(2.4rem, 10vw, 3.4rem); font-weight: 300; line-height: 1; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+.popup-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0 0 !important; }
+.popup .button { background: var(--band-ink); border-color: var(--band-ink); color: var(--band); cursor: pointer; font: inherit; }
+.popup .button:hover { background: var(--pop); border-color: var(--pop); color: var(--ink); }
+.popup .button-line { background: transparent; color: var(--band-ink); border-color: var(--band-ink); }
+.popup .button-line:hover { background: var(--band-ink); color: var(--band); }
+.band .button.button-line { background: transparent; color: var(--band-ink); border-color: var(--band-ink); }
+.band .button.button-line:hover { background: var(--band-ink); color: var(--band); border-color: var(--band-ink); }
