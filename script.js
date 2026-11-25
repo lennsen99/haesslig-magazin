@@ -11,10 +11,10 @@
     lb.className = 'lightbox';
     lb.setAttribute('aria-label', 'Bildansicht');
     lb.innerHTML =
-      '<button type="button" class="lb-close">schließen</button>' +
-      '<button type="button" class="lb-prev" aria-label="Vorheriges Bild">zurück</button>' +
+      '<button type="button" class="lb-close">Schließen</button>' +
+      '<button type="button" class="lb-prev" aria-label="Vorheriges Bild">Zurück</button>' +
       '<img alt="">' +
-      '<button type="button" class="lb-next" aria-label="Nächstes Bild">weiter</button>' +
+      '<button type="button" class="lb-next" aria-label="Nächstes Bild">Weiter</button>' +
       '<p class="lb-count" aria-live="polite"></p>';
     document.body.appendChild(lb);
     lbImg = lb.querySelector('img');
@@ -69,8 +69,8 @@
     '<h2 id="popup-titel">Release in Halle</h2>' +
     '<p class="popup-big">Sa, 05.12.<br>19 Uhr</p>' +
     '<p>Offspace, Berliner Str. 243, Halle (Saale)<br>Lesungen, Musik &amp; Heartbreak-Karaoke<br>Eintritt frei</p>' +
-    '<p class="popup-buttons"><a class="button" href="' + (document.querySelector('#release-halle') ? '#release-halle' : 'index.html#release-halle') + '">mehr infos</a>' +
-    '<button type="button" class="button button-line popup-close">schlie\u00dfen</button></p>';
+    '<p class="popup-buttons"><a class="button" href="' + (document.querySelector('#release-halle') ? '#release-halle' : 'index.html#release-halle') + '">Mehr Infos</a>' +
+    '<button type="button" class="button button-line popup-close">Schlie\u00dfen</button></p>';
   function zu() {
     try { sessionStorage.setItem('release-halle-gesehen', '1'); } catch (e) {}
     if (d.open) d.close();
